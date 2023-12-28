@@ -36,8 +36,7 @@ const HeroContent = () => {
           <span>
             Providing
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
-              {" "}
-              the best{" "}
+              the best
             </span>
             project exprience
           </span>
@@ -47,9 +46,10 @@ const HeroContent = () => {
           variants={slideInFromLeft(0.8)}
           className="text-lg text-gray-400 my-5 max-w-[600px]"
         >
-          Hi, I am Ayush Mehrotra and I'm a Full Stack Software Engineer with
-          experience in Website, Mobile, and Software development. Check out my
-          projects and skills.this site is heavy in size might break some UX.
+          Hi, I am Ayush Mehrotra and I&apos;m a Full Stack Software Engineer
+          with experience in Website, Mobile, and Software development. Check
+          out my projects and skills.this site is heavy in size might break some
+          UX.
         </motion.p>
         <motion.a
           variants={slideInFromLeft(1)}
