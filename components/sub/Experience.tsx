@@ -27,8 +27,8 @@ const Experience = () => {
             variants={slideInFromLeft(0.8)}
             className="text-lg text-gray-400 my-5 max-w-[600px]"
           >
-            Implemented clean code by using react components and prop drilling,
-            Created employee feature in admin panel, Fixed responsiveness of
+            Implemented clean code by using react components and prop drilling
+            Created employee feature in admin panel Fixed responsiveness of
             complete admin dashboard and it&apos;s routes and optimise it by 30
             percent
           </motion.p>
@@ -43,16 +43,16 @@ const Experience = () => {
             }
             className=" text-[20px] cursor-pointer  font-semibold text-white    "
           >
-            Lyft - Back-End Engineering Job Simulation.
+            Lyft&quot;Back-End Engineering Job Simulation.
           </h2>
 
           <motion.p
             variants={slideInFromLeft(0.8)}
             className="text-lg text-gray-400 my-5 max-w-[600px]"
           >
-            Lyft Back-End Engineering Virtual Experience Program held by Forage.
-            A program that consists of 4 chapter, namely: software architecture,
-            refactoring, unit-testing, and test-driven-development.
+            Lyft Back-End Engineering Virtual Experience Program held by Forage
+            A program that consists of 4 chapter namely software architecture
+            refactoring unit-testing and test driven-development
           </motion.p>
         </div>
       </div>
