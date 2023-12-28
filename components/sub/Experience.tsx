@@ -29,7 +29,8 @@ const Experience = () => {
           >
             Implemented clean code by using react components and prop drilling,
             Created employee feature in admin panel, Fixed responsiveness of
-            complete admin dashboard and it's routes and optimise it by 30%.
+            complete admin dashboard and it's routes and optimise it by 30
+            percent
           </motion.p>
         </div>
         <div className="m-3  border border-white border-y-2 p-4 rounded-lg  ">
@@ -49,10 +50,9 @@ const Experience = () => {
             variants={slideInFromLeft(0.8)}
             className="text-lg text-gray-400 my-5 max-w-[600px]"
           >
-            Lyft Back-End Engineering Virtual Experience Program" held by
-            Forage. A program that consists of 4 chapter, namely: software
-            architecture, refactoring, unit-testing, and
-            test-driven-development.
+            Lyft Back-End Engineering Virtual Experience Program held by Forage.
+            A program that consists of 4 chapter, namely: software architecture,
+            refactoring, unit-testing, and test-driven-development.
           </motion.p>
         </div>
       </div>

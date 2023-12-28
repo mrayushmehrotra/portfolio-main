@@ -14,12 +14,12 @@ const Projects = () => {
         <ProjectCard
           src="/spotify.webp"
           title="Spotify Next.js Clone"
-          description="A Spotify Clone Build in Nextjs with Supabase, radix UI, zustand, while following clean code while following OOPS, "
+          description="A Spotify Clone Build in Nextjs with Supabase sql database , radix UI, zustand, while following clean code while following OOPS, "
         />
         <ProjectCard
           src="/notion.jpg"
           title="Notion AI Clone"
-          description="A Notion Clone build in Next js with OPENAI API Integration, and Clerk Auth and Using Quill library."
+          description="A Notion Clone  build in Next js with OPENAI API Integration with using tanstack, and Clerk Auth and Using Quill library."
         />
         <ProjectCard
           src="/ecommerce.webp"
