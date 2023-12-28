@@ -9,6 +9,7 @@ import {
 } from "@/utils/motion";
 import { SparklesIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
+import Experience from "./Experience";
 
 const HeroContent = () => {
   return (
@@ -48,7 +49,8 @@ const HeroContent = () => {
         >
           Hi, I am Ayush Mehrotra and I&apos;m a Full Stack Software Engineer
           with experience in Website, Mobile, and Software development. Check
-          out my projects and skills.
+          out my projects and skills.this site is heavy in size might break some
+          UX.
         </motion.p>
         <motion.a
           variants={slideInFromLeft(1)}

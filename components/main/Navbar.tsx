@@ -35,7 +35,10 @@ const Navbar = () => {
             <a href="#projects" className="cursor-pointer">
               Projects
             </a>
-            <a href="#projects" className="cursor-pointer">
+            <a
+              href="https://drive.google.com/u/0/uc?id=19iYTIl0gvQQL0Ujl2zvTypZ7XxUuqRgI&export=download"
+              className="cursor-pointer"
+            >
               Resume
             </a>
           </div>
