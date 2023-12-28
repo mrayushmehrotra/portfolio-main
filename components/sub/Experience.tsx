@@ -18,7 +18,7 @@ const Experience = () => {
 
       <div className="mt-8"></div>
       <div className="flex items-center justify-center">
-        <div className="m-3  border border-white border-y-2 p-4 rounded-lg  ">
+        <div className="m-3   p-4 rounded-lg  ">
           <h2 className=" text-[20px]  font-semibold text-stone-200">
             CodeTikki, SWE-Intern, Remote
           </h2>
@@ -29,11 +29,11 @@ const Experience = () => {
           >
             Implemented clean code by using react components and prop drilling,
             Created employee feature in admin panel, Fixed responsiveness of
-            complete admin dashboard and it's routes and optimise it by 30
+            complete admin dashboard and it&apos;s routes and optimise it by 30
             percent
           </motion.p>
         </div>
-        <div className="m-3  border border-white border-y-2 p-4 rounded-lg  ">
+        <div className="m-3  p-4 rounded-lg  ">
           <h2
             onClick={() =>
               window.open(
