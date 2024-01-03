@@ -47,9 +47,7 @@ const HeroContent = () => {
           className="text-lg text-gray-400 my-5 max-w-[600px]"
         >
           Hi, I am Ayush Mehrotra and I&apos;m a Full Stack Software Engineer
-          with experience in Website, Mobile, and Software development. Check
-          out my projects and skills.this site is heavy in size might break some
-          UX.
+          with expertise in Web & Mobile App Development.
         </motion.p>
         <motion.a
           variants={slideInFromLeft(1)}
