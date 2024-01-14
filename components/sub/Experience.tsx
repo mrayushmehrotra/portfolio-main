@@ -1,11 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import {
-  slideInFromLeft,
-  slideInFromRight,
-  slideInFromTop,
-} from "@/utils/motion";
+import { slideInFromLeft } from "@/utils/motion";
 const Experience = () => {
   return (
     <div className="flex-col flex items-center justify-center">
@@ -17,7 +13,7 @@ const Experience = () => {
       </motion.div>
 
       <div className="mt-8"></div>
-      <div className="flex items-center justify-center">
+      <div className="lg:flex items-center justify-center">
         <div className="m-3   p-4 rounded-lg  ">
           <h2 className=" text-[20px]  font-semibold text-stone-200">
             CodeTikki, SWE-Intern, Remote
@@ -38,7 +34,7 @@ const Experience = () => {
             onClick={() =>
               window.open(
                 "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Lyft/xSw9echtixLAoPdsH_Lyft_Zyj746CAXJ5BbCdCK_1700289748124_completion_certificate.pdf",
-                "_blank"
+                "_blank",
               )
             }
             className=" text-[20px] cursor-pointer  font-semibold text-white    "
