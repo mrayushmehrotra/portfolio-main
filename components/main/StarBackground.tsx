@@ -15,8 +15,8 @@ const StarBackground = (props: any) => {
   );
 
   useFrame((state, delta) => {
-    ref.current.rotation.x -= delta / 7;
-    ref.current.rotation.y -= delta / 15;
+    ref.current.rotation.x += delta / 4;
+    ref.current.rotation.y -= delta / 2;
   });
 
   return (
