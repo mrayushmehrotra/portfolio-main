@@ -37,17 +37,19 @@ const Footer = () => {
               <source src="/encryption.webm" type="video/webm" />
             </video>
           )}
-          {showGithub && (
-            <GitHubCalendar
-              username="mrayushmehrotra"
-              blockSize={15}
-              blockMargin={4}
-              fontSize={20}
-              hideMonthLabels
-              hideTotalCount
-              hideColorLegend
-            />
-          )}
+          <div className="z-40">
+            {showGithub && (
+              <GitHubCalendar
+                username="mrayushmehrotra"
+                blockSize={15}
+                blockMargin={4}
+                fontSize={20}
+                hideMonthLabels
+                hideTotalCount
+                hideColorLegend
+              />
+            )}
+          </div>
           <motion.a
             onClick={getGithub}
             variants={slideInFromLeft(1)}
