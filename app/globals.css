@@ -3,7 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
+html {
+  scroll-behavior: smooth;
+}
 
 .cursive {
   font-family: "Cedarville Cursive", cursive;
@@ -63,8 +65,6 @@
 .scrollbar-hidden::-webkit-scrollbar {
   display: none;
 }
-
-
 
 html {
   scroll-behavior: smooth;

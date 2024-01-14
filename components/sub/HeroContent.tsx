@@ -9,9 +9,9 @@ import {
 } from "@/utils/motion";
 import { SparklesIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
-import Experience from "./Experience";
 
 const HeroContent = () => {
+  const portfolio = "<portfolio/>";
   return (
     <motion.div
       initial="hidden"
@@ -32,11 +32,11 @@ const HeroContent = () => {
           className="flex flex-col gap-6 mt-6 text-6xl font-bold text-white max-w-[600px] w-auto h-auto"
         >
           <span>
-            Providing &nbsp;
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
-              the best &nbsp;
+            Providing&nbsp; the best &nbsp;
+            <span className="text-transparent  bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
+              {portfolio} <br />
             </span>
-            project exprience
+            exprience
           </span>
         </motion.div>
 
