@@ -58,6 +58,11 @@ export const Skill_data = [
 
 export const Socials = [
   {
+    name: "Linkedin",
+    src: "/linkedin.svg",
+    onclick: "https://www.linkedin.com/in/ayush-mehrotra-99419724b",
+  },
+  {
     name: "Instagram",
     src: "/instagram.svg",
     onclick: "https://instagram.com/mein.ayush.hoon",
