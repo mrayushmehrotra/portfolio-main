@@ -21,10 +21,10 @@ const HeroContent = () => {
       <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start">
         <motion.div
           variants={slideInFromTop}
-          className="hidden md:lg:flex Welcome-box py-[8px] px-[7px] border border-[#7042f88b] rounded-md opacity-[0.9]"
+          className="flex Welcome-box py-[8px] px-[7px]  opacity-[0.9]"
         >
           <SparklesIcon className="text-[#b49bff] mr-[10px] h-5 w-5" />
-          <h1 className="Welcome-text text-[#b49bff] text-[13px]">
+          <h1 className="Welcome-text text-[#b49bff] text-[18px]">
             Ayush Mehrotra Portfolio
           </h1>
         </motion.div>
@@ -49,12 +49,6 @@ const HeroContent = () => {
           Hi, I am Ayush Mehrotra and I&apos;m a Full Stack Software Engineer
           with expertise in Web & Mobile App Development.
         </motion.p>
-        <motion.a
-          variants={slideInFromLeft(1)}
-          className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
-        >
-          Learn More!
-        </motion.a>
       </div>
 
       <motion.div
