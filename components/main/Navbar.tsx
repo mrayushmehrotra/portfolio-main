@@ -10,51 +10,42 @@ const Navbar = () => {
         <div className="w-full h-full flex flex-row items-center justify-between m-auto px-[10px]">
           <a
             href="#about-me"
-            className="h-auto md:flex lg:flex hidden w-auto  flex-row items-center"
+            className="h-auto md:flex lg:flex w-auto flex flex-row items-center"
           >
             <Image
               src="/NavLogo.png"
               alt="logo"
               width={70}
               height={70}
-              className="cursor-pointer hover:animate-slowspin"
+              className="cursor-pointer hover:animate-bounce"
             />
 
-            <span className="font-bold ml-[10px] hidden md:block text-gray-300">
+            <span className="font-bold ml-[10px] md:block text-gray-300">
               Ayush
             </span>
           </a>
 
           <div className=" w-[500px] h-full flex flex-row items-center justify-between md:hidden sm:hidden lg:flex ">
-            <div className="lg:flex items-center justify-between w-full h-auto border border-[#7042f861] bg-[#0300145e] mr-[15px] px-[20px] py-[10px] rounded-full text-gray-200">
-              <a
-                href="#about-me"
-                className="cursor-pointer md:hidden hidden lg:flex"
-              >
+            <div className="lg:flex md:hidden hidden  items-center justify-between w-full h-auto border border-[#7042f861] bg-[#0300145e] mr-[15px] px-[20px] py-[10px] rounded-full text-gray-200">
+              <a href="#about-me" className="cursor-pointer ">
                 About me
               </a>
-              <a
-                href="#skills"
-                className="cursor-pointer md:hidden hidden lg:flex"
-              >
+              <a href="#skills" className="cursor-pointer ">
                 Skills
               </a>
-              <a
-                href="#projects"
-                className="cursor-pointer md:hidden hidden lg:flex"
-              >
+              <a href="#projects" className="cursor-pointer ">
                 Projects
               </a>
               <a
                 href="https://drive.google.com/file/d/1OOZ7zVMmsqcEoiPKyuxVViRdWjNp1HAL/view?pli=1"
-                className="cursor-pointer"
+                className="cursor-pointer   "
               >
                 Resume
               </a>
             </div>
           </div>
 
-          <div className="flex flex-wrap flex-row gap-2">
+          <div className="flex sm:flex-nowrap justify-center flex-row gap-2">
             {Socials.map((social) => (
               <Image
                 src={social.src}
