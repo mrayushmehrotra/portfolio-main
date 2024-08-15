@@ -7,16 +7,29 @@ import { Points, PointMaterial, Preload } from "@react-three/drei";
 import * as random from "maath/random/dist/maath-random.esm";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(ScrollTrigger);
 const StarBackground = (props: any) => {
   const ref: any = useRef();
   const [sphere] = useState(() =>
     random.inSphere(new Float32Array(8000), { radius: 1.2 })
   );
-
+  var moveX: any;
   useFrame((state, delta) => {
-    ref.current.rotation.x -= delta / 4;
-    ref.current.rotation.y -= delta / 4;
+    moveX = ref.current.rotation.x -= delta / 2;
+    const moveY = (ref.current.rotation.y -= delta / 2);
+  });
+
+  useGSAP(() => {
+    gsap.set(moveX, {
+      filter: "blur(10px)",
+      scrollTrigger: {
+        trigger: "body",
+        start: "top top",
+        scrub: true,
+        markers: true,
+      },
+    });
   });
 
   return (
