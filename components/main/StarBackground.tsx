@@ -12,7 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
 const StarBackground = (props: any) => {
   const ref: any = useRef();
   const [sphere] = useState(() =>
-    random.inSphere(new Float32Array(8000), { radius: 1.2 })
+    random.inSphere(new Float32Array(8000), { radius: 1.2 }),
   );
   var moveX: any;
   useFrame((state, delta) => {
@@ -27,7 +27,6 @@ const StarBackground = (props: any) => {
         trigger: "body",
         start: "top top",
         scrub: true,
-        markers: true,
       },
     });
   });
