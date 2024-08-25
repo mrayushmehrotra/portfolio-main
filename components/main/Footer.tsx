@@ -54,7 +54,7 @@ const Footer = () => {
             <motion.a
               onClick={getGithub}
               variants={slideInFromLeft(1)}
-              className="p-2 mt-4 z-30  border border-[#7042f861] bg-[#0300145e]  font-semibold button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
+              className="p-2 mt-8 z-29  border border-[#7042f861] bg-[#0300145e]  font-semibold button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
             >
               {btnText}
             </motion.a>
