@@ -61,8 +61,8 @@ const Footer = () => {
           </div>
         </div>
       </center>
-      <div className="lg:hidden fixed bottom-0 left-[25%]  md:flex sm:flex z-20  flex items-center justify-center gap-x-5 pb-5    ">
-        <div className=" z-20  w-[500px] h-full flex flex-row items-center justify-between md:mr-20">
+      <div className="lg:hidden  fixed left-7  bottom-0   md:flex sm:flex z-20  flex items-center justify-center  gap-x-5 pb-5 w-fit   ">
+        <div className=" z-20  w-[50vh] h-full flex flex-row items-center justify-between md:mr-20">
           <div className="z-20  flex items-center justify-between  mr-[15px] px-[20px] py-[10px] rounded-full text-gray-200 w-full h-auto border border-[#7042f861] bg-[#0300145e]  ">
             <a href="#about-me" className="cursor-pointer ">
               About me
