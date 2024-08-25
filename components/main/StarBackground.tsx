@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef, useEffect, Suspense } from "react";
-import { Canvas, useFrame, useThree } from "@react-three/fiber";
+import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial, OrbitControls } from "@react-three/drei";
 // @ts-ignore
 import * as random from "maath/random/dist/maath-random.esm";
@@ -12,7 +12,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 const StarBackground = (props: any) => {
   const ref = useRef<any>();
-  const starMesh = ref.current;
 
   // Generate random star positions
   const [sphere] = React.useState(() =>
@@ -20,16 +19,16 @@ const StarBackground = (props: any) => {
   );
 
   useFrame((state, delta) => {
-    if (starMesh) {
-      starMesh.rotation.x += delta * 0.15; // Slow continuous rotation
-      starMesh.rotation.y += delta * 0.15; // Slow continuous rotation
+    if (ref.current) {
+      ref.current.rotation.x += delta * 0.15; // Slow continuous rotation
+      ref.current.rotation.y += delta * 0.15; // Slow continuous rotation
     }
   });
 
   useEffect(() => {
-    if (starMesh) {
+    if (ref.current) {
       // Initialize GSAP ScrollTrigger to control rotation
-      gsap.to(starMesh.rotation, {
+      gsap.to(ref.current.rotation, {
         x: Math.PI * 2,
         y: Math.PI * 2,
         scrollTrigger: {
@@ -45,7 +44,7 @@ const StarBackground = (props: any) => {
       // Clean up ScrollTrigger on component unmount
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
-  }, [starMesh]);
+  }, []);
 
   return (
     <group rotation={[0, 0, Math.PI / 8]}>
@@ -53,7 +52,7 @@ const StarBackground = (props: any) => {
       <Points ref={ref} positions={sphere} stride={3} frustumCulled {...props}>
         <PointMaterial
           transparent
-          color="$fff"
+          color="#fff" // Correct color syntax
           size={0.005} // Ensure size remains constant
           sizeAttenuation={true}
           depthWrite={false}
