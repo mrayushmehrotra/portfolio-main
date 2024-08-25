@@ -38,7 +38,7 @@ const StarBackground = (props: any) => {
 
   return (
     <group rotation={[0, 0, Math.PI / 8]}>
-      <OrbitControls />
+      <OrbitControls rotation={[-Math.PI / 2, 0, 0]} />
       <Points ref={ref} positions={sphere} stride={3} frustumCulled {...props}>
         <PointMaterial
           transparent
