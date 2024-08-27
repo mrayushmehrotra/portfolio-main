@@ -147,7 +147,7 @@ export const Backend_skill = [
   },
   {
     skill_name: "Stripe Payment",
-    Image: "/stripe.webp",
+    Image: "/stripe.svg",
     width: 80,
     height: 80,
   },

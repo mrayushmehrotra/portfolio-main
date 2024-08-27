@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { slideInFromLeft } from "@/utils/motion";
 const Experience = () => {
   return (
-    <div className="flex-col flex items-center justify-center">
+    <div className="flex-col flex items-center justify-center z-20    ">
       <motion.div
         variants={slideInFromLeft(0.5)}
         className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-10"

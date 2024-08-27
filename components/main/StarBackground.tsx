@@ -2,7 +2,7 @@
 
 import React, { useRef, useEffect, Suspense } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Points, PointMaterial, OrbitControls } from "@react-three/drei";
+import { Points, PointMaterial } from "@react-three/drei";
 // @ts-ignore
 import * as random from "maath/random/dist/maath-random.esm";
 import gsap from "gsap";
@@ -12,16 +12,37 @@ gsap.registerPlugin(ScrollTrigger);
 
 const StarBackground = (props: any) => {
   const ref = useRef<any>();
+  const mouse = useRef({ x: 0, y: 0 });
 
   // Generate random star positions
   const [sphere] = React.useState(() =>
     random.inSphere(new Float32Array(8000), { radius: 1.2 }),
   );
 
-  useFrame((state, delta) => {
+  // Mouse move event listener
+  useEffect(() => {
+    const handleMouseMove = (event: MouseEvent) => {
+      mouse.current.x = (event.clientX / window.innerWidth) * 2 - 1;
+      mouse.current.y = -(event.clientY / window.innerHeight) * 2 + 1;
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
+
+  // UseFrame to update the star rotation based on mouse movement
+  useFrame(() => {
     if (ref.current) {
-      ref.current.rotation.x += delta * 0.15; // Slow continuous rotation
-      ref.current.rotation.y += delta * 0.15; // Slow continuous rotation
+      // Slow constant rotation
+      ref.current.rotation.y += 0.001;
+      ref.current.rotation.x += 0.001;
+
+      // Adjust rotation based on mouse movement
+      ref.current.rotation.y += mouse.current.x * 0.011;
+      ref.current.rotation.x += mouse.current.y * 0.011;
     }
   });
 
@@ -48,7 +69,9 @@ const StarBackground = (props: any) => {
 
   return (
     <group rotation={[0, 0, Math.PI / 8]}>
-      <OrbitControls enableZoom={false} />
+      {/* do something after then the user could not touch the canvas by mouse or touch */}
+      <ambientLight intensity={0.5} />
+
       <Points ref={ref} positions={sphere} stride={3} frustumCulled {...props}>
         <PointMaterial
           transparent
